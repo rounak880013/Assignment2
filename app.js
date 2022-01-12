@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 const app=express();
 const hostname='0.0.0.0';
 app.use(cookieParser())
-let port='8080';
+let port = process.env.PORT || 80;
 app.listen(port,function(){
     console.log(`server is listening on port ${port}`);
 });
